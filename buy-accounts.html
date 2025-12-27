@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Buy Accounts — TOXEMS SALES</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background-color:#050505;color:#fff;padding:1rem;/* stronger yellow linen overlay */background-image:linear-gradient(45deg,rgba(251,191,36,0.12) 25%,transparent 25%),linear-gradient(-45deg,rgba(251,191,36,0.12) 25%,transparent 25%),linear-gradient(90deg,rgba(255,255,255,0.02) 50%,transparent 50%);background-size:12px 12px,12px 12px,24px 24px;background-blend-mode:overlay}
+    .container{max-width:980px;margin:0 auto}
+    .items-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .item-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:0.75rem;border-radius:0.5rem;border:1px solid rgba(251,191,36,0.18)}
+    .item-image{height:120px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:linear-gradient(180deg,rgba(251,191,36,0.06),rgba(255,255,255,0.02));border-radius:0.375rem;margin-bottom:0.5rem}
+    .item-name{font-weight:700;color:#fbbf24}
+    h1{color:#fbbf24;margin-top:0.25rem}
+    .btn{display:inline-block;padding:0.4rem 0.6rem;border-radius:0.4rem;background:#fbbf24;color:#000;text-decoration:none;font-weight:700}
+    .btn:hover{filter:brightness(0.95);box-shadow:0 6px 18px rgba(251,191,36,0.16)}
+    a.back{color:#fbbf24;font-size:0.9rem}
+    nav .btn{background:#fbbf24;color:#000}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="display:flex;gap:1rem;align-items:center;">
+      <a class="back" href="toxems%20sales%20source%20code.html">← Back to Home</a>
+      <nav style="margin-left:auto;display:flex;gap:0.5rem;align-items:center;">
+        <a class="btn" href="browse-diamonds.html" style="background:#3b82f6">Browse Diamonds</a>
+      </nav>
+    </div>
+    <h1>🎮 Buy Accounts</h1>
+    <p style="color:#9ca3af">Accounts listed by admin are shown below; click Buy to simulate purchase.</p>
+    <div id="publicAccountsGrid" class="items-grid"></div>
+  </div>
+
+  <script>
+    function lsGet(k,f){try{return JSON.parse(localStorage.getItem(k))||f}catch(e){return f}}
+    function lsSet(k,v){localStorage.setItem(k,JSON.stringify(v))}
+    function render(){
+      const grid=document.getElementById('publicAccountsGrid'); grid.innerHTML='';
+      const items=lsGet('tx_items', []);
+      const accounts=items.filter(i=>i.type==='account');
+      if(!accounts.length){ grid.innerHTML='<div style="color:#9ca3af">No accounts available.</div>'; return }
+      accounts.forEach(it=>{
+        const card=document.createElement('div'); card.className='item-card';
+        const imgWrap=document.createElement('div'); imgWrap.className='item-image';
+        if(it.image){ const img=document.createElement('img'); img.src=it.image; img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover'; imgWrap.appendChild(img);} else { imgWrap.textContent='🎮' }
+        const info=document.createElement('div'); info.innerHTML='<div class="item-name">'+(it.name||'')+'</div><div style="color:#9ca3af">'+(it.price||'')+'</div><div style="color:#9ca3af">'+(it.meta||'')+'</div>';
+        const buyBtn=document.createElement('button'); buyBtn.className='btn'; buyBtn.textContent='Buy'; buyBtn.style.marginTop='0.5rem';
+        buyBtn.onclick=function(){
+          const txs=lsGet('tx_transactions', []);
+          txs.unshift({ id:'TX_'+Date.now(), customer:'Guest', product:it.name, amount:it.price, time:new Date().toLocaleString(), status:'Completed' });
+          lsSet('tx_transactions', txs);
+          alert('Purchase simulated for '+it.name+' (check admin transactions).');
+        };
+        info.appendChild(buyBtn);
+        card.appendChild(imgWrap); card.appendChild(info); grid.appendChild(card);
+      })
+    }
+    render(); window.addEventListener('storage', render);
+  </script>
+</body>
+</html>

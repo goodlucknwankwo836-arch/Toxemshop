@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/9a800f173b8d9e8f-s.p.ea25be69.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/media/fabcf92ba1ccea36-s.p.19f28380.woff2"
+      as="font"
+      crossorigin=""
+      type="font/woff2"
+    />
+    <link rel="preload" as="image" href="dsss images.jpg" />
+    <link rel="preload" as="image" href="ff2.jpg" />
+    <link
+      rel="stylesheet"
+      href="/_next/static/chunks/86454a3e4bf48d7d.css"
+      data-precedence="next"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/chunks/c95f72df469726b2.css"
+      data-precedence="next"
+    />
+    <script src="/_next/static/chunks/87a939617be2fa8c.js" async=""></script>
+    <script src="/_next/static/chunks/8caed091165340c7.js" async=""></script>
+    <script src="/_next/static/chunks/c903f9580a4b6572.js" async=""></script>
+    <meta name="next-size-adjust" content="" />
+    <title>TOXEMS SALES - #1 Accredited Gaming Store in Nigeria</title>
+    <meta
+      name="description"
+      content="Best prices on diamonds, coins, and game credits. Fast delivery, secure payment, 24/7 support."
+    />
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      sizes="256x256"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        --bg-0: #05060a;
+        --bg-1: #071326;
+        --primary: #3b82f6;
+        --accent: #10b981;
+        --gold: #fbbf24;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: radial-gradient(1200px 400px at 10% 10%, rgba(59,130,246,0.06), transparent), linear-gradient(180deg, var(--bg-0), var(--bg-1));
+        color: #fff;
+        transition: background 0.4s ease, color 0.25s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .container {
+        min-height: 100vh;
+        background: #000;
+      }
+
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 9999px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #2563eb;
+        transform: scale(1.05);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: #3b82f6;
+        color: white;
+      }
+
+      /* Admin Dashboard Styles */
+      .admin-dashboard {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        overflow-y: auto;
+        padding: 2rem;
+      }
+
+      .admin-dashboard.active {
+        display: block;
+      }
+
+      .admin-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .admin-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .admin-header h1 {
+        color: #fbbf24;
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      .close-admin {
+        background: #ef4444;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .close-admin:hover {
+        background: #dc2626;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fbbf24;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Admin polish and tools */
+      .admin-tools { display:flex; gap:1rem; margin-bottom:1.5rem; align-items:flex-start; }
+      .online-panel { background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); padding:1rem; border-radius:0.75rem; width:260px; }
+      .online-panel h3{ color:#93c5fd; font-size:1rem; margin-bottom:0.5rem; }
+      .online-list { list-style:none; padding:0; margin:0; max-height:260px; overflow:auto; }
+      .online-list li { padding:0.35rem 0.4rem; border-bottom:1px dashed rgba(255,255,255,0.03); color:#d1d5db; font-size:0.95rem; }
+
+      .code-editor { flex:1; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); padding:0.75rem; border-radius:0.75rem; }
+      .code-editor textarea { width:100%; min-height:220px; background:transparent; color:#e5e7eb; border:1px solid rgba(255,255,255,0.04); padding:0.5rem; border-radius:0.5rem; font-family:monospace; }
+      .code-editor .editor-actions { display:flex; gap:0.5rem; margin-top:0.5rem; }
+
+      .stat-label {
+        color: #d1d5db;
+        font-size: 0.875rem;
+      }
+
+      .admin-section {
+        margin-bottom: 2rem;
+      }
+
+      .admin-section h2 {
+        color: #10b981;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(16, 185, 129, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .item-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s ease, border-color 0.28s ease;
+        will-change: transform, box-shadow;
+      }
+
+      .item-card:hover {
+        border-color: #fbbf24;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+      }
+
+      .item-image {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(45deg, #3b82f6, #10b981);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        transition: transform 0.35s ease, filter 0.35s ease;
+      }
+
+      img { transition: transform 0.35s ease, filter 0.35s ease; }
+
+      @keyframes popIn { from { opacity:0; transform: translateY(8px) scale(.995); } to { opacity:1; transform: translateY(0) scale(1); } }
+      .item-card { animation: popIn 360ms ease both; }
+
+      .item-info {
+        padding: 1rem;
+      }
+
+      .item-name {
+        color: #fbbf24;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .item-price {
+        color: #10b981;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .item-meta {
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        color: white;
+      }
+
+      .admin-table th {
+        background: rgba(59, 130, 246, 0.2);
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        color: #93c5fd;
+        font-weight: 600;
+      }
+
+      .admin-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .admin-table tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .status-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .status-success {
+        background: rgba(16, 185, 129, 0.3);
+        color: #a7f3d0;
+      }
+
+      .status-pending {
+        background: rgba(251, 191, 36, 0.3);
+        color: #fcd34d;
+      }
+
+      .status-failed {
+        background: rgba(239, 68, 68, 0.3);
+        color: #fca5a5;
+      }
+
+      /* Admin UI polish */
+      .admin-toolbar {
+        display:flex; gap:0.5rem; align-items:center; margin-top:1rem; margin-bottom:1.25rem;
+      }
+
+      .admin-search {
+        flex:1; display:flex; gap:0.5rem; align-items:center;
+      }
+
+      .admin-search input { padding:0.5rem; border-radius:0.5rem; border:1px solid rgba(255,255,255,0.08); background:transparent; color: #fff; }
+
+      .admin-actions { display:flex; gap:0.5rem; }
+
+      .btn-small { padding:0.35rem 0.6rem; font-size:0.85rem; border-radius:0.45rem; }
+
+      .featured-badge { background: linear-gradient(90deg,#fbbf24,#f97316); color:#000; padding:0.25rem 0.5rem; border-radius:0.5rem; font-weight:700; margin-left:0.5rem; }
+
+      .reply-box { display:flex; gap:0.5rem; margin-top:0.5rem; }
+
+      .reply-box textarea { flex:1; padding:0.5rem; border-radius:0.5rem; }
+
+      .muted { color:#9ca3af; }
+
+      /* Global hover "shine" and pop-up effect for interactive elements */
+      .btn, a, .item-card, .stat-card, .admin-table tr, .online-panel li, .item-image, .admin-actions button {
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+        will-change: transform, box-shadow;
+        position: relative;
+      }
+
+      .btn:hover, a:hover, .item-card:hover, .stat-card:hover, .admin-table tr:hover, .online-panel li:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 14px 30px rgba(0,0,0,0.5), 0 6px 18px rgba(251,191,36,0.08);
+        z-index: 5;
+      }
+
+      /* Sheen animation */
+      .btn::after, .item-card::after, a::after {
+        content: '';
+        position: absolute;
+        top: 0; left: -75%;
+        width: 50%; height: 100%;
+        background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+        transform: skewX(-20deg);
+        transition: left 0.9s cubic-bezier(.2,.9,.2,1);
+        pointer-events: none;
+      }
+
+      .btn:hover::after, .item-card:hover::after, a:hover::after { left: 125%; }
+
+      /* Make admin table rows look clickable */
+      .admin-table tr { cursor: default; }
+      .admin-table tr:hover { cursor: pointer; }
+
+      /* Slightly refine admin header and controls */
+      .admin-header h1 { letter-spacing: 1px; text-transform: uppercase; }
+      .admin-container { padding: 1.25rem; }
+      .close-admin { box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+    </style>
+  </head>
+  <body>
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard">
+      <div class="admin-container">
+        <div class="admin-header">
+          <h1>🎮 TOXEMS ADMIN DASHBOARD</h1>
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <div class="admin-toolbar">
+              <div class="admin-search">
+                <input id="adminSearchInput" placeholder="Search items, tickets, transactions..." oninput="adminSearch(this.value)" />
+              </div>
+              <div class="admin-actions">
+                <button class="btn btn-small" onclick="exportCSV('tx_leads','leads.csv')">Export Leads</button>
+                <button class="btn btn-small" onclick="exportCSV('tx_transactions','transactions.csv')">Export Tx</button>
+              </div>
+            </div>
+            <button class="close-admin" onclick="closeAdminDashboard()">✕ Close</button>
+          </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="onlineUsers">—</div>
+            <div class="stat-label">Online Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="totalTransactions">—</div>
+            <div class="stat-label">Transactions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="totalRevenue">—</div>
+            <div class="stat-label">Total Revenue</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="productsListed">—</div>
+            <div class="stat-label">Products Listed</div>
+          </div>
+        </div>
+
+        <div class="admin-tools">
+          <div class="online-panel">
+            <h3>Admins Online</h3>
+            <ul id="onlineUsersList" class="online-list"><li style="color:#9ca3af;">No data — connect backend</li></ul>
+          </div>
+          <div class="code-editor">
+            <h3 style="color:#93c5fd; margin:0 0 0.5rem 0;">Admin Code Editor</h3>
+            <textarea id="adminCodeEditor" placeholder="Load a file using 'Load file' and edit here..."></textarea>
+            <div class="editor-actions">
+              <input id="editorPath" placeholder="path (e.g. index.html)" style="flex:1; padding:0.4rem; border-radius:0.35rem; background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff;" />
+              <button class="btn btn-secondary" onclick="loadFileForEdit()">Load file</button>
+              <button class="btn btn-primary" onclick="saveAdminCode()">Save file</button>
+            </div>
+            <div id="editorMsg" style="margin-top:0.5rem;color:#9ca3af;font-size:0.9rem;"></div>
+          </div>
+        </div>
+
+        <!-- Diamonds Section -->
+        <div class="admin-section">
+          <h2>💎 Diamonds For Sale</h2>
+          <form id="addDiamondForm" onsubmit="handleAddItem(event, 'diamond')" style="display:flex; gap:0.75rem; margin-bottom:1rem; flex-wrap:wrap;">
+            <input id="diamondName" placeholder="Name" required style="padding:0.5rem; border-radius:0.5rem; flex:1; min-width:160px;" />
+            <input id="diamondPrice" placeholder="Price" required style="padding:0.5rem; border-radius:0.5rem; width:120px;" />
+            <input id="diamondStock" placeholder="Stock" required style="padding:0.5rem; border-radius:0.5rem; width:100px;" />
+            <input id="diamondImage" type="file" accept="image/*" style="padding:0.25rem;" />
+            <button type="submit" class="btn btn-primary" style="padding:0.5rem 1rem;">Add Diamond</button>
+          </form>
+          <div id="diamondsGrid" class="items-grid"></div>
+        </div>
+
+        <!-- Users Management -->
+        <div class="admin-section">
+          <h2>👥 Users Management</h2>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+            <form id="addUserForm" onsubmit="handleAddUser(event)" style="display:flex; gap:0.5rem; align-items:center;">
+              <input id="userName" placeholder="Name" required style="padding:0.5rem; border-radius:0.5rem;" />
+              <input id="userEmail" placeholder="Email" required style="padding:0.5rem; border-radius:0.5rem;" />
+              <select id="userRole" style="padding:0.5rem; border-radius:0.5rem;"><option value="buyer">buyer</option><option value="seller">seller</option><option value="moderator">moderator</option><option value="admin">admin</option></select>
+              <button type="submit" class="btn btn-primary">Create User</button>
+            </form>
+            <div style="flex:1; min-width:320px;">
+              <input id="userSearch" placeholder="Search users" style="width:100%; padding:0.5rem; border-radius:0.5rem;" oninput="renderUsers(this.value)" />
+            </div>
+          </div>
+
+          <div style="margin-top:1rem;">
+            <table class="admin-table" id="usersTable">
+              <thead>
+                <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Verified</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="usersBody">
+                <tr><td colspan="6" style="color:#9ca3af; text-align:center; padding:1rem;">No users yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Gaming Accounts Section -->
+        <div class="admin-section">
+          <h2>🎮 Gaming Accounts For Sale</h2>
+          <form id="addAccountForm" onsubmit="handleAddItem(event, 'account')" style="display:flex; gap:0.75rem; margin-bottom:1rem; flex-wrap:wrap;">
+            <input id="accountName" placeholder="Name" required style="padding:0.5rem; border-radius:0.5rem; flex:1; min-width:160px;" />
+            <input id="accountPrice" placeholder="Price" required style="padding:0.5rem; border-radius:0.5rem; width:120px;" />
+            <input id="accountMeta" placeholder="Meta (level/info)" style="padding:0.5rem; border-radius:0.5rem; width:140px;" />
+            <input id="accountImage" type="file" accept="image/*" style="padding:0.25rem;" />
+            <button type="submit" class="btn btn-primary" style="padding:0.5rem 1rem;">Add Account</button>
+          </form>
+          <div id="accountsGrid" class="items-grid"></div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="admin-section">
+          <h2>💳 Recent Transactions</h2>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Amount</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsBody">
+                <tr><td colspan="6" style="color:#9ca3af; text-align:center; padding:1rem;">No real transactions available — connect backend or add transactions in admin.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Website Statistics -->
+        <div class="admin-section">
+          <h2>📊 Website Statistics</h2>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Value</th>
+                  <th>Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                        <tbody id="websiteStatsBody">
+                          <tr><td colspan="3" style="color:#9ca3af; text-align:center; padding:1rem;">No live stats available — connect backend or generate activity.</td></tr>
+                        </tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+          <!-- Customer Support Section -->
+          <div class="admin-section">
+            <h2>🛠️ Customer Support</h2>
+            <form id="addSupportForm" onsubmit="handleAddSupport(event)" style="display:flex; gap:0.5rem; margin-bottom:1rem; flex-wrap:wrap;">
+              <input id="supportName" placeholder="Customer name" required style="padding:0.5rem; border-radius:0.5rem; min-width:160px; flex:1;" />
+              <input id="supportEmail" placeholder="Customer email" required style="padding:0.5rem; border-radius:0.5rem; width:220px;" />
+              <input id="supportSubject" placeholder="Subject (optional)" style="padding:0.5rem; border-radius:0.5rem; width:220px;" />
+              <textarea id="supportMessage" placeholder="Message" required style="padding:0.5rem; border-radius:0.5rem; width:100%; min-height:80px;"></textarea>
+              <div style="width:100%; display:flex; justify-content:flex-end; gap:0.5rem;">
+                <button type="submit" class="btn btn-primary" style="padding:0.5rem 1rem;">Create Ticket</button>
+              </div>
+            </form>
+
+            <div class="table-wrapper">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Reply</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="supportBody"></tbody>
+              </table>
+            </div>
+          </div>
+        
+        <!-- Visitors / Leads -->
+        <div class="admin-section">
+          <h2>📥 Visitors & Leads</h2>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody id="leadsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Header Section -->
+      <header style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 1.5rem; position: relative; z-index: 20;">
+        <!-- Logo and Brand -->
+        <div style="display: flex; gap: 0.75rem; align-items: center; justify-content: center;">
+          
+          <img
+            src="Capture-removebg-preview.png"
+            alt="TOXEMS SALES Logo"
+            width="100"
+            height="100"
+            style="object-fit: contain; display:block;"
+          />
+          <span style="font-size: 1.1rem; color: #fbbf24; font-weight: 800; letter-spacing: 1px;">
+            TOXEMS SALES
+          </span>
+        </div>
+
+        <!-- Search Bar -->
+        <div style="width: 100%; max-width: 480px; position: relative; display: flex;">
+          <input
+            id="searchInput"
+            placeholder="Search for account and top-up here"
+            style="width: 100%; padding: 0.5rem 0.75rem 0.5rem 2rem; border-radius: 9999px 0 0 9999px; border: 1px solid rgba(255,255,255,0.2); border-right: none; background: rgba(255,255,255,0.1); color: white; text-align: center; outline: none; backdrop-filter: blur(10px); font-size: 0.9rem; flex: 1;"
+            onkeyup="checkAdminCommand(this.value)"
+            onkeypress="if(event.key==='Enter') handleSearch()"
+          />
+          <button onclick="handleSearch()" style="background: rgba(59, 130, 246, 0.3); border: 1px solid rgba(255,255,255,0.2); border-left: none; border-radius: 0 9999px 9999px 0; color: #fbbf24; font-size: 1.1rem; padding: 0.5rem 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(59, 130, 246, 0.5)'; this.style.boxShadow='0 0 12px rgba(59, 130, 246, 0.45)';" onmouseout="this.style.background='rgba(59, 130, 246, 0.3)'; this.style.boxShadow='none';">🔍</button>
+        </div>
+      </header>
+      <!-- New HOME Section (added) -->
+      <section id="HOME" style="width:100%; padding:1.5rem 1rem; display:flex; flex-direction:column; align-items:center; gap:1rem; background: rgba(255,255,255,0.02);">
+        <div style="color:#fbbf24; font-weight:900; font-size:2rem; letter-spacing:1px; text-align:center; text-transform:uppercase; margin-bottom:0.25rem;">
+          #1 ACCREDITED STORE IN NIGERIA
+        </div>
+        <h2 style="color:#fbbf24; font-size:1.75rem; margin:0;">HOME</h2>
+        <p style="color:#d1d5db; max-width:720px; text-align:center;">Welcome to TOXEMS SALES — your trusted gaming store. Quick links below help you start browsing diamonds or buying accounts.</p>
+        <div style="display:flex; gap:0.75rem;">
+          <a href="#home" class="btn btn-primary">Go To Home</a>
+          <a href="browse-diamonds.html" class="btn btn-secondary">Browse Diamonds</a>
+          <a href="buy-accounts.html" class="btn btn-secondary">Buy Account</a>
+        </div>
+      </section>
+
+      <!-- Home Section -->
+      <section id="home" style="width: 100%; display: flex; flex-direction: column;">
+        <!-- Hero Image Section (original CTAs removed; using new HOME section above) -->
+        <div style="padding: 1rem; display: flex; justify-content: center; animation: slideUp 0.8s ease-out 0.3s forwards;">
+          <img
+            alt="hero-mockup"
+            width="400"
+            height="400"
+            style="object-fit: cover; color: transparent; display: block; border-radius: 1rem; max-width: 100%; height: auto;"
+            src="ff5.jpg"
+          />
+        </div>
+
+      <!-- Customers Section -->
+      <div style="overflow: hidden; width: 100%; display: flex; flex-direction: column; gap: 1rem; padding: 2rem 0;">
+        <h3 style="font-size: 1.125rem; color: #d1d5db; text-align: center; font-weight: 600;">
+          ⭐ TRUSTED BY THOUSANDS
+        </h3>
+        <div class="animate-scroll" style="display: flex; gap: 1.5rem; white-space: nowrap;">
+          <p style="color: #9ca3af; font-weight: 500;">Ahmed K</p>
+          <p style="color: #9ca3af; font-weight: 500;">Chioma O</p>
+          <p style="color: #9ca3af; font-weight: 500;">David M</p>
+          <p style="color: #9ca3af; font-weight: 500;">Fatima A</p>
+          <p style="color: #9ca3af; font-weight: 500;">Emmanuel T</p>
+          <p style="color: #9ca3af; font-weight: 500;">Grace L</p>
+          <p style="color: #9ca3af; font-weight: 500;">Hassan Y</p>
+          <p style="color: #9ca3af; font-weight: 500;">Ibrahim A</p>
+          <p style="color: #9ca3af; font-weight: 500;">John J</p>
+          <p style="color: #9ca3af; font-weight: 500;">Kingsley K</p>
+          <p style="color: #9ca3af; font-weight: 500;">Lara C</p>
+          <p style="color: #9ca3af; font-weight: 500;">Michael B</p>
+          <p style="color: #9ca3af; font-weight: 500;">Nancy A</p>
+          <p style="color: #9ca3af; font-weight: 500;">Oscar E</p>
+          <p style="color: #9ca3af; font-weight: 500;">Pamela J</p>
+          <p style="color: #9ca3af; font-weight: 500;">Quentin A</p>
+          <p style="color: #9ca3af; font-weight: 500;">Rachel D</p>
+          <p style="color: #9ca3af; font-weight: 500;">Samuel S</p>
+          <p style="color: #9ca3af; font-weight: 500;">Tina B</p>
+          <p style="color: #9ca3af; font-weight: 500;">Umesh A</p>
+          <p style="color: #9ca3af; font-weight: 500;">Victor M</p>
+          <p style="color: #9ca3af; font-weight: 500;">Walter C</p>
+          <p style="color: #9ca3af; font-weight: 500;">Xander A</p>
+          <p style="color: #9ca3af; font-weight: 500;">Yasmin E</p>
+          <p style="color: #9ca3af; font-weight: 500;">Zack B</p>
+        </div>
+      </div>
+
+      <!-- What We Offer Section -->
+      <div style="padding: 2.5rem 1rem; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+        <div style="gap: 0.5rem; text-align: center;">
+          <h2 style="color: #3b82f6; font-size: 2.25rem; font-weight: 600;">
+            What We Offer
+          </h2>
+          <p style="color: #93c5fd; font-weight: 500; margin-top: 0.5rem;">
+            Everything you'll need to have a seamless gaming experience
+          </p>
+        </div>
+        <div style="position: relative; width: 100%; max-width: 42rem; display: flex; justify-content: center; background: rgba(255,255,255,0.1); backdrop-filter: blur(25px); border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(16, 185, 129, 0.2); padding-bottom: 1rem; animation:g slideInLeft 0.8s ease-out;">
+          <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%; align-items: center;">
+            <img
+              alt="service"
+              width="300"
+              height="200"
+              style="object-fit: cover; width: 100%; color: transparent; border-radius: 1rem 1rem 0 0;"
+              src="what we offer.jpeg"
+            />
+            <p style="text-align: center; font-size: 1.5rem; color: #fbbf24; font-weight: 600; padding-bottom: 1rem;">
+              Gaming Accounts
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div style="padding: 2.5rem 1rem; width: 100%; background: linear-gradient(to bottom, transparent, rgba(30, 58, 138, 0.1), transparent);">
+        <h2 style="color: white; font-size: 1.875rem; text-align: center; margin: 2rem 0; font-weight: 400;">
+          Why Choose
+          <span style="color: #10b981; font-size: 2.25rem; font-weight: 600; display: block; margin-top: 0.5rem;">
+            TOXEMS SALES?
+          </span>
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+          <!-- Feature 1 -->
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(255,255,255,0.1); overflow: hidden; background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); animation: slideUp 0.6s ease-out 0.1s both; transition: all 0.3s ease;">
+            <img
+              src="Money.png"
+              alt="Best Prices"
+              width="400"
+              height="400"
+              style="object-fit: contain; color: transparent; display:block;"
+            />
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #fbbf24;">Best Prices</h3>
+            <p style="color: #d1d5db; line-height: 1.5; font-size: 0.875rem;">
+              Enjoy unbeatable prices on all top-ups. We constantly monitor the market to ensure you always get the lowest rates.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3); overflow: hidden; background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); animation: slideUp 0.6s ease-out 0.2s both; transition: all 0.3s ease;">
+            <img
+              src="secure payament.png"
+              alt="Secure Payment"
+              width="900"
+              height="900"
+              style="width:400px; height:400px; object-fit:contain; display:block; color:transparent; margin:0 auto;"
+            />
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #fbbf24;">Secure Payment</h3>
+            <p style="color: #d1d5db; line-height: 1.5; font-size: 0.875rem;">
+              Your transactions are protected with bank-level encryption and trusted payment gateways for complete safety.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3); overflow: hidden; background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); animation: slideUp 0.6s ease-out 0.3s both; transition: all 0.3s ease;">
+            <img
+              src="fast delivery 2.png"
+              alt="Fast Delivery"
+              width="400"
+              height="400"
+              style="object-fit: contain; color: transparent; display:block;"
+            />
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #fbbf24;">Fast Delivery</h3>
+            <p style="color: #d1d5db; line-height: 1.5; font-size: 0.875rem;">
+              Get your diamonds, coins, and credits delivered instantly. Our automated system processes orders within seconds.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3); overflow: hidden; background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); animation: slideUp 0.6s ease-out 0.4s both; transition: all 0.3s ease;">
+            <img
+              src="twenty four hour support.avif"
+              alt="24/7 Support"
+              width="400"
+              height="400"
+              style="object-fit: contain; color: transparent; display:block;"
+            />
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #fbbf24;">24/7 Support</h3>
+            <p style="color: #d1d5db; line-height: 1.5; font-size: 0.875rem;">
+              Our support team is always available to assist you with orders, payments, or any issues you encounter.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <div style="padding: 2.5rem 1rem; width: 100%;">
+        <h2 style="text-align: center; font-size: 1.875rem; color: white; font-weight: 700; margin-bottom: 0.75rem;">
+          What Our
+          <span style="color: #fbbf24; font-size: 2.25rem; display: block;">Customers</span>
+          Say
+        </h2>
+        <p style="text-align: center; color: #fcd34d; margin-bottom: 2.5rem; font-weight: 600;">
+          Join thousands of satisfied gamers who trust us
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 56rem; margin: 0 auto;">
+          <!-- Testimonial 1 -->
+          <div style="padding: 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.2); backdrop-filter: blur(25px); animation: slideUp 0.6s ease-out 0.1s both; transition: all 0.3s ease;">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
+              <div style="width: 3rem; height: 3rem; display: flex; justify-content: center; align-items: center; font-size: 1.125rem; color: white; border-radius: 9999px; background: linear-gradient(to bottom right, #3b82f6, #1e40af); font-weight: 700;">
+                A
+              </div>
+              <div>
+                <p style="font-size: 1.25rem; font-weight: 600; color: #10b981;">Ahmed K.</p>
+                <p style="font-size: 0.75rem; color: #9ca3af;">Verified Buyer</p>
+              </div>
+            </div>
+            <p style="border-top: 1px solid rgba(255,255,255,0.1); color: #a7f3d0; padding-top: 1rem;">
+              "Fastest delivery I've ever experienced! Got my diamonds in less than 5 minutes. Highly recommended!"
+            </p>
+            <div style="display: flex; gap: 0.25rem; margin-top: 1rem;">
+              <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div style="padding: 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.2); backdrop-filter: blur(25px); animation: slideUp 0.6s ease-out 0.2s both; transition: all 0.3s ease;">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
+              <div style="width: 3rem; height: 3rem; display: flex; justify-content: center; align-items: center; font-size: 1.125rem; color: white; border-radius: 9999px; background: linear-gradient(to bottom right, #ec4899, #be123c); font-weight: 700;">
+                S
+              </div>
+              <div>
+                <p style="font-size: 1.25rem; font-weight: 600; color: #10b981;">Sarah M.</p>
+                <p style="font-size: 0.75rem; color: #9ca3af;">Verified Buyer</p>
+              </div>
+            </div>
+            <p style="border-top: 1px solid rgba(255,255,255,0.1); color: #a7f3d0; padding-top: 1rem;">
+              "Very reliable and fast support. They helped with my order instantly. Will order again!"
+            </p>
+            <div style="display: flex; gap: 0.25rem; margin-top: 1rem;">
+              <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div style="padding: 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.2); backdrop-filter: blur(25px); animation: slideUp 0.6s ease-out 0.3s both; transition: all 0.3s ease;">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem;">
+              <div style="width: 3rem; height: 3rem; display: flex; justify-content: center; align-items: center; font-size: 1.125rem; color: white; border-radius: 9999px; background: linear-gradient(to bottom right, #a855f7, #6d28d9); font-weight: 700;">
+                J
+              </div>
+              <div>
+                <p style="font-size: 1.25rem; font-weight: 600; color: #10b981;">James L.</p>
+                <p style="font-size: 0.75rem; color: #9ca3af;">Verified Buyer</p>
+              </div>
+            </div>
+            <p style="border-top: 1px solid rgba(255,255,255,0.1); color: #a7f3d0; padding-top: 1rem;">
+              "Great service and super affordable prices. Been using for 3 months. 10/10 recommend!"
+            </p>
+            <div style="display: flex; gap: 0.25rem; margin-top: 1rem;">
+              <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div style="width: 100%; padding: 3rem 1rem; background: linear-gradient(to right, rgba(37, 99, 235, 0.2), rgba(16, 185, 129, 0.2)); text-align: center;">
+        <h2 style="font-size: 1.875rem; font-weight: 700; color: white; margin-bottom: 1rem;">Ready to Get Started?</h2>
+        <p style="color: #d1d5db; margin-bottom: 1.5rem;">
+          Join thousands of satisfied gamers. Purchase your gaming essentials now.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="location.href='browse-diamonds.html'">Browse Diamonds</button>
+          <button class="btn" style="background: #10b981; color: white;" onclick="location.href='buy-accounts.html'">Buy Account</button>
+        </div>
+      </div>
+
+      <!-- Browse Diamonds (public) -->
+      <section id="browse-diamonds" style="width:100%; padding:2rem 1rem; background: rgba(255,255,255,0.02);">
+        <h2 style="color:#fbbf24; font-weight:700; text-align:center;">💎 Browse Diamonds</h2>
+        <p style="color:#d1d5db; text-align:center; max-width:720px; margin:0.5rem auto 1rem;">Browse all diamonds listed. Newly added diamonds appear here automatically.</p>
+        <div id="publicDiamondsGrid" class="items-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:1rem; margin-top:1rem;"></div>
+      </section>
+
+      <!-- Buy Accounts (public) -->
+      <section id="buy-accounts" style="width:100%; padding:2rem 1rem; background: rgba(255,255,255,0.01);">
+        <h2 style="color:#10b981; font-weight:700; text-align:center;">🎮 Buy Account</h2>
+        <p style="color:#d1d5db; text-align:center; max-width:720px; margin:0.5rem auto 1rem;">All accounts listed by admin are shown here for purchase.</p>
+        <div id="publicAccountsGrid" class="items-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem; margin-top:1rem;"></div>
+      </section>
+
+      <!-- Support Form (public) -->
+      <div style="width: 100%; padding: 2rem 1rem; display:flex; justify-content:center;">
+        <form id="publicSupportForm" onsubmit="handlePublicSupport(event)" style="max-width:720px; width:100%; display:flex; gap:0.5rem; flex-wrap:wrap; background:rgba(255,255,255,0.03); padding:1rem; border-radius:0.75rem;">
+          <input id="pubName" name="name" placeholder="Your name" required style="flex:1; padding:0.5rem; border-radius:0.5rem;" />
+          <input id="pubEmail" name="email" type="email" placeholder="Your email" required style="flex:1; padding:0.5rem; border-radius:0.5rem;" />
+          <textarea id="pubMessage" name="message" placeholder="Describe your issue or complaint" required style="width:100%; padding:0.5rem; border-radius:0.5rem; min-height:90px;"></textarea>
+          <div style="width:100%; display:flex; justify-content:flex-end;">
+            <button class="btn btn-primary" type="submit" style="padding:0.5rem 1rem;">Submit Support Ticket</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div style="width: 100%; padding: 2.5rem 1rem; display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.5);">
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <span style="color: white; font-weight: 700; font-size: 1.125rem;">🎮</span>
+          <span style="font-size: 1rem; color: #10b981; font-weight: 600;">TOXEMS SALES</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; width: 100%;">
+          <!-- Quick Links -->
+          <div>
+            <p style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 1rem;">Quick Links</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Home</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Purchase Account</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Redeem Code</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">FAQ</a>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <p style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 1rem;">Support</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Contact Us</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Track Order</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Refund Policy</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Terms</a>
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <p style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 1rem;">Company</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">About Us</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Blog</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Careers</a>
+              <a href="#" style="color: #9ca3af; text-decoration: none; transition: all 0.3s ease;">Partner</a>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <p style="font-size: 1.125rem; font-weight: 600; color: white; margin-bottom: 1rem;">Contact</p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: #10b981;">📧</span>
+                <a href="mailto:brokenshop001@gmail.com" style="color: #9ca3af; text-decoration: none; font-size: 0.875rem;">brokenshop001@gmail.com</a>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: #10b981;">📱</span>
+                <a href="tel:+2349012345678" style="color: #9ca3af; text-decoration: none; font-size: 0.875rem;">+234 901 234 5678</a>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: #10b981;">📍</span>
+                <p style="color: #9ca3af; font-size: 0.875rem;">Lagos, Nigeria</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+          <p style="color: #9ca3af; text-align: center; font-size: 0.875rem;">
+            © 2025 TOXEMS SALES. All rights reserved. | Trusted by Gamers Across Nigeria
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div style="display: flex; gap: 1rem; position: fixed; bottom: 1rem; right: 1rem; left: 1rem; border-radius: 9999px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem; justify-content: center; max-width: 20rem; margin: 0 auto; left: 50%; transform: translateX(-50%); z-index: 1000;">
+        <button class="btn btn-primary" style="flex: 1; font-size: 0.875rem;">
+          Shop
+        </button>
+        <button class="btn btn-secondary" style="flex: 1; font-size: 0.875rem;">
+          Support
+        </button>
+        <button id="soundToggleBtn" title="Toggle site sounds" style="margin-left:0.5rem; background:transparent; border:none; color: #fbbf24; display:flex; align-items:center; gap:0.35rem; padding:0.25rem 0.5rem; border-radius:0.5rem;">
+          🔊
+        </button>
+      </div>
+      </section>
+      <!-- End Home Section -->
+    </div>
+
+    <script>
+      // Admin Dashboard Functions (enhanced)
+      const ADMIN_COMMAND = "OPEN ADMIN DASHBOARD FOR TOXEMS SALES";
+
+      function checkAdminCommand(value) {
+        if (!value) return;
+        if (value.trim().toUpperCase() === ADMIN_COMMAND) {
+          openAdminDashboard();
+        }
+      }
+
+      function handleSearch() {
+        const searchValue = document.getElementById('searchInput').value;
+        checkAdminCommand(searchValue);
+      }
+
+      function openAdminDashboard() {
+        const dashboard = document.getElementById('adminDashboard');
+        dashboard.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('searchInput').value = '';
+        loadAdminData();
+      }
+
+      function closeAdminDashboard() {
+        const dashboard = document.getElementById('adminDashboard');
+        dashboard.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Local storage helpers
+      function lsGet(key, fallback) {
+        try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch(e) { return fallback; }
+      }
+      function lsSet(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+
+      // Add item (diamond/account)
+      function handleAddItem(e, type) {
+        e.preventDefault();
+        const id = 'ITEM_' + Date.now();
+        let name, price, stock, meta, fileInput;
+        if (type === 'diamond') {
+          name = document.getElementById('diamondName').value.trim();
+          price = document.getElementById('diamondPrice').value.trim();
+          stock = document.getElementById('diamondStock').value.trim();
+          fileInput = document.getElementById('diamondImage');
+          meta = '';
+        } else {
+          name = document.getElementById('accountName').value.trim();
+          price = document.getElementById('accountPrice').value.trim();
+          meta = document.getElementById('accountMeta').value.trim();
+          fileInput = document.getElementById('accountImage');
+          stock = '';
+        }
+
+        const file = fileInput && fileInput.files && fileInput.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            saveItem({ id, type, name, price, stock, meta, image: evt.target.result });
+          };
+          reader.readAsDataURL(file);
+        } else {
+          saveItem({ id, type, name, price, stock, meta, image: null });
+        }
+
+        // reset form
+        e.target.reset();
+      }
+
+      function saveItem(item) {
+        const items = lsGet('tx_items', []);
+        items.push(item);
+        lsSet('tx_items', items);
+        renderItems();
+        updateProductsStat();
+      }
+
+      function renderItems() {
+        const items = lsGet('tx_items', []);
+        const diamondsGrid = document.getElementById('diamondsGrid');
+        const accountsGrid = document.getElementById('accountsGrid');
+        if (diamondsGrid) diamondsGrid.innerHTML = '';
+        if (accountsGrid) accountsGrid.innerHTML = '';
+
+        items.forEach(it => {
+          const card = document.createElement('div');
+          card.className = 'item-card';
+          const imgWrap = document.createElement('div');
+          imgWrap.className = 'item-image';
+          if (it.image) {
+            const img = document.createElement('img');
+            img.src = it.image;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            imgWrap.innerHTML = '';
+            imgWrap.appendChild(img);
+          } else {
+            imgWrap.textContent = it.type === 'diamond' ? '💎' : '🎮';
+          }
+          const info = document.createElement('div');
+          info.className = 'item-info';
+          info.innerHTML = '<div class="item-name">' + escapeHtml(it.name) + '</div>' +
+            '<div class="item-price">' + escapeHtml(it.price) + '</div>' +
+            '<div class="item-meta">' + escapeHtml((it.meta || '') + (it.stock ? (' • Stock: ' + it.stock) : '')) + '</div>';
+          card.appendChild(imgWrap);
+          card.appendChild(info);
+
+          // actions: edit, delete, feature
+          const actions = document.createElement('div');
+          actions.style.padding = '0.5rem';
+          actions.style.display = 'flex';
+          actions.style.gap = '0.5rem';
+
+          const editBtn = document.createElement('button');
+          editBtn.className = 'btn btn-small'; editBtn.textContent = 'Edit';
+          editBtn.onclick = () => editItem(it.id);
+
+          const delBtn = document.createElement('button');
+          delBtn.className = 'btn btn-small'; delBtn.textContent = 'Delete';
+          delBtn.onclick = () => { if(confirm('Delete this item?')) deleteItem(it.id); };
+
+          const featBtn = document.createElement('button');
+          featBtn.className = 'btn btn-small'; featBtn.textContent = it.featured ? 'Unfeature' : 'Feature';
+          featBtn.onclick = () => toggleFeatured(it.id);
+
+          actions.appendChild(editBtn); actions.appendChild(delBtn); actions.appendChild(featBtn);
+          card.appendChild(actions);
+
+          if (it.featured) {
+            const fb = document.createElement('span'); fb.className = 'featured-badge'; fb.textContent = 'FEATURED';
+            info.querySelector('.item-name').appendChild(fb);
+          }
+
+          if (it.type === 'diamond' && diamondsGrid) diamondsGrid.appendChild(card);
+          if (it.type === 'account' && accountsGrid) accountsGrid.appendChild(card);
+
+          // Also populate public browse grids (if present) with cleaned clones
+          try {
+            const pubDiamondGrid = document.getElementById('publicDiamondsGrid');
+            const pubAccountGrid = document.getElementById('publicAccountsGrid');
+
+            if (it.type === 'diamond' && pubDiamondGrid) {
+              const pubCard = card.cloneNode(true);
+              const smallBtns = pubCard.querySelectorAll('.btn-small');
+              smallBtns.forEach(b => b.remove());
+              const actDiv = pubCard.querySelector('[style*="padding: 0.5rem"]');
+              if (actDiv) actDiv.remove();
+              pubDiamondGrid.appendChild(pubCard);
+            }
+
+            if (it.type === 'account' && pubAccountGrid) {
+              const pubCard = card.cloneNode(true);
+              const smallBtns = pubCard.querySelectorAll('.btn-small');
+              smallBtns.forEach(b => b.remove());
+              const actDiv = pubCard.querySelector('[style*="padding: 0.5rem"]');
+              if (actDiv) actDiv.remove();
+              // add a public 'Buy' button to simulate purchase
+              const buyBtn = document.createElement('button');
+              buyBtn.className = 'btn btn-primary';
+              buyBtn.style.marginTop = '0.5rem';
+              buyBtn.textContent = 'Buy';
+              buyBtn.onclick = function(){
+                const txs = lsGet('tx_transactions', []);
+                txs.unshift({ id: 'TX_' + Date.now(), customer: 'Guest', product: it.name, amount: it.price, time: new Date().toLocaleString(), status: 'Completed' });
+                lsSet('tx_transactions', txs);
+                renderTransactions();
+                alert('Purchase simulated for ' + it.name + ' — check Transactions in admin.');
+              };
+              const infoEl = pubCard.querySelector('.item-info') || pubCard;
+              infoEl.appendChild(buyBtn);
+              pubAccountGrid.appendChild(pubCard);
+            }
+          } catch(e) { /* safe fallback */ }
+        });
+      }
+
+      function editItem(id) {
+        const items = lsGet('tx_items', []);
+        const it = items.find(x => x.id === id);
+        if (!it) return alert('Item not found');
+        const newName = prompt('Edit name', it.name);
+        if (newName === null) return;
+        it.name = newName.trim() || it.name;
+        const newPrice = prompt('Edit price', it.price);
+        if (newPrice !== null) it.price = newPrice.trim() || it.price;
+        lsSet('tx_items', items);
+        renderItems();
+        updateProductsStat();
+      }
+
+      function deleteItem(id) {
+        let items = lsGet('tx_items', []);
+        items = items.filter(x => x.id !== id);
+        lsSet('tx_items', items);
+        renderItems();
+        updateProductsStat();
+      }
+
+      function toggleFeatured(id) {
+        const items = lsGet('tx_items', []);
+        const it = items.find(x => x.id === id);
+        if (!it) return;
+        it.featured = !it.featured;
+        lsSet('tx_items', items);
+        renderItems();
+      }
+
+      function escapeHtml(str) { return String(str||'').replace(/[&<>"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m];}); }
+
+      // Transactions & Leads rendering
+      function renderTransactions() {
+        const tx = lsGet('tx_transactions', []);
+        const tbody = document.getElementById('transactionsBody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        tx.forEach(t => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + escapeHtml(t.id) + '</td>' +
+                         '<td>' + escapeHtml(t.customer) + '</td>' +
+                         '<td>' + escapeHtml(t.product) + '</td>' +
+                         '<td>' + escapeHtml(t.amount) + '</td>' +
+                         '<td>' + escapeHtml(t.time) + '</td>' +
+                         '<td><span class="status-badge ' + (t.status==='Completed'?'status-success': t.status==='Pending'?'status-pending':'status-failed') + '">' + escapeHtml(t.status) + '</span></td>';
+          tbody.appendChild(tr);
+        });
+      }
+
+      function renderLeads() {
+        const leads = lsGet('tx_leads', []);
+        const tbody = document.getElementById('leadsBody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        leads.forEach(l => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + escapeHtml(l.name) + '</td>' +
+                         '<td>' + escapeHtml(l.email) + '</td>' +
+                         '<td>' + new Date(l.time).toLocaleString() + '</td>';
+          tbody.appendChild(tr);
+        });
+      }
+
+      function updateStats() {
+        // online users = visits in last 5 minutes
+        const visits = lsGet('tx_visits', []);
+        const now = Date.now();
+        const online = visits.filter(v => (now - v.ts) <= (5*60*1000)).length;
+        const tx = lsGet('tx_transactions', []);
+        const revenue = tx.reduce((s,t)=> s + (Number((t.amount||'').toString().replace(/[^0-9.-]+/g,''))||0), 0);
+        const items = lsGet('tx_items', []);
+        const productsCount = items.length;
+
+        const elOnline = document.getElementById('onlineUsers'); if (elOnline) elOnline.textContent = online.toLocaleString();
+        const elTx = document.getElementById('totalTransactions'); if (elTx) elTx.textContent = tx.length.toLocaleString();
+        const elRev = document.getElementById('totalRevenue'); if (elRev) elRev.textContent = '₦' + revenue.toLocaleString();
+        const elProd = document.getElementById('productsListed'); if (elProd) elProd.textContent = productsCount;
+        // also render website statistics table
+        try { renderWebsiteStats(); } catch(e){}
+      }
+
+      function updateProductsStat(){ updateStats(); }
+
+      function loadAdminData() {
+        // initial sample data if none — create a small demo diamond and account for public view
+        if (!localStorage.getItem('tx_items')) {
+          const sampleItems = [
+            { id: 'ITEM_demo_diamond', type: 'diamond', name: 'Demo Diamond - 100', price: '₦500', stock: '10', meta: 'Demo pack', image: null, featured: true },
+            { id: 'ITEM_demo_account', type: 'account', name: 'Demo Account - Level 20', price: '₦2,000', stock: '', meta: 'Demo game account', image: null, featured: false }
+          ];
+          lsSet('tx_items', sampleItems);
+        }
+        if (!localStorage.getItem('tx_transactions')) {
+          lsSet('tx_transactions', []);
+        }
+        if (!localStorage.getItem('tx_leads')) {
+          lsSet('tx_leads', []);
+        }
+        if (!localStorage.getItem('tx_visits')) {
+          lsSet('tx_visits', []);
+        }
+
+        renderItems();
+        renderTransactions();
+        renderLeads();
+        renderSupport();
+        updateStats();
+      }
+
+      // -------- Support ticket functions --------
+      function handleAddSupport(e) {
+        e.preventDefault();
+        const id = 'TICK_' + Date.now();
+        const name = document.getElementById('supportName').value.trim();
+        const email = document.getElementById('supportEmail').value.trim();
+        const subject = document.getElementById('supportSubject').value.trim();
+        const message = document.getElementById('supportMessage').value.trim();
+        const tickets = lsGet('tx_support', []);
+        tickets.unshift({ id, name, email, subject, message, replies: [], status: 'Open', time: Date.now() });
+        lsSet('tx_support', tickets);
+        renderSupport();
+        e.target.reset();
+      }
+
+      function handlePublicSupport(e) {
+        e.preventDefault();
+        const name = document.getElementById('pubName').value.trim();
+        const email = document.getElementById('pubEmail').value.trim();
+        const message = document.getElementById('pubMessage').value.trim();
+        if (!name || !email || !message) return alert('Please fill all fields');
+        const id = 'PTX_' + Date.now();
+        const tickets = lsGet('tx_support', []);
+        tickets.unshift({ id, name, email, subject: 'Public submission', message, replies: [], status: 'Open', time: Date.now() });
+        lsSet('tx_support', tickets);
+        renderSupport();
+        e.target.reset();
+        alert('Support ticket submitted — we will reach out via email (simulated).');
+      }
+
+      function renderSupport() {
+        const tickets = lsGet('tx_support', []);
+        const tbody = document.getElementById('supportBody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        tickets.forEach(t => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + escapeHtml(t.id) + '</td>' +
+                         '<td>' + escapeHtml(t.name) + '</td>' +
+                         '<td>' + escapeHtml(t.email) + '</td>' +
+                         '<td style="max-width:260px; white-space:normal;">' + escapeHtml(t.message) + renderRepliesInline(t) + '</td>' +
+                         '<td style="max-width:260px; white-space:normal;">' + renderLatestReply(t) + '</td>' +
+                         '<td><span class="status-badge ' + (t.status==='Open'?'status-pending':'status-success') + '">' + escapeHtml(t.status) + '</span></td>' +
+                         '<td>' +
+                           '<button onclick="showReplyBox(\''+t.id+'\')" class="btn btn-small" style="margin-right:0.25rem;">Reply</button>' +
+                           '<button onclick="toggleTicketStatus(\''+t.id+'\')" class="btn btn-small" style="margin-right:0.25rem;">Toggle</button>' +
+                           '<button onclick="deleteTicket(\''+t.id+'\')" class="btn btn-small">Delete</button>' +
+                         '</td>';
+          tbody.appendChild(tr);
+        });
+      }
+
+      function renderRepliesInline(ticket) {
+        if (!ticket.replies || !ticket.replies.length) return '';
+        const html = ticket.replies.map(r => '<div style="margin-top:0.25rem; border-top:1px solid rgba(255,255,255,0.04); padding-top:0.25rem; font-size:0.9rem;">' + escapeHtml(r.from) + ': ' + escapeHtml(r.message) + '</div>').join('');
+        return html;
+      }
+
+      function renderLatestReply(ticket) {
+        if (!ticket.replies || !ticket.replies.length) return '';
+        const lr = ticket.replies[ticket.replies.length-1];
+        return escapeHtml(lr.message) + '<div class="muted" style="font-size:0.8rem;">' + new Date(lr.time).toLocaleString() + '</div>';
+      }
+
+      function showReplyBox(ticketId) {
+        const row = Array.from(document.querySelectorAll('#supportBody tr')).find(tr => tr.firstChild && tr.firstChild.textContent===ticketId);
+        if (!row) return;
+        // inject reply box under message cell
+        const msgCell = row.children[3];
+        // remove existing reply box if any
+        const existing = msgCell.querySelector('.reply-box');
+        if (existing) { existing.remove(); return; }
+        const box = document.createElement('div'); box.className = 'reply-box';
+        const ta = document.createElement('textarea'); ta.placeholder = 'Type reply...';
+        const send = document.createElement('button'); send.className = 'btn btn-primary'; send.textContent = 'Send';
+        send.onclick = function(){ const text = ta.value.trim(); if(!text) return alert('Empty reply'); adminReply(ticketId, text); box.remove(); };
+        box.appendChild(ta); box.appendChild(send); msgCell.appendChild(box);
+      }
+
+      function deleteTicket(ticketId) {
+        if(!confirm('Delete ticket?')) return;
+        let tickets = lsGet('tx_support', []);
+        tickets = tickets.filter(t=>t.id!==ticketId);
+        lsSet('tx_support', tickets);
+        renderSupport();
+      }
+
+      function promptReply(ticketId) {
+        const reply = prompt('Type your reply to the customer:');
+        if (reply !== null) adminReply(ticketId, reply);
+      }
+
+      function adminReply(ticketId, replyText) {
+        const tickets = lsGet('tx_support', []);
+        const t = tickets.find(x => x.id === ticketId);
+        if (!t) return alert('Ticket not found');
+        t.replies = t.replies || [];
+        t.replies.push({ from: 'admin', message: replyText, time: Date.now() });
+        t.status = 'Replied';
+        lsSet('tx_support', tickets);
+        renderSupport();
+        // Optionally: store outgoing reply to transactions or logs
+      }
+
+      function toggleTicketStatus(ticketId) {
+        const tickets = lsGet('tx_support', []);
+        const t = tickets.find(x => x.id === ticketId);
+        if (!t) return;
+        t.status = (t.status === 'Open') ? 'Closed' : 'Open';
+        lsSet('tx_support', tickets);
+        renderSupport();
+      }
+
+      // Track visits on page load
+      function trackVisit() {
+        try {
+          const visits = lsGet('tx_visits', []);
+          visits.push({ id: 'V_' + Date.now(), ts: Date.now(), ua: navigator.userAgent });
+          // keep last 24 hours
+          const cutoff = Date.now() - (24*60*60*1000);
+          const pruned = visits.filter(v => v.ts >= cutoff);
+          lsSet('tx_visits', pruned);
+        } catch(e){}
+      }
+
+      /* --- Admin realtime & code-editor stubs --- */
+      function connectAdminSocket() {
+        // Attempts to open a websocket to update online admins in real time.
+        // Requires server-side socket (e.g., Socket.IO or ws) at ws://localhost:4000 or change the URL.
+        try {
+          const url = (location.protocol === 'https:' ? 'wss://' : 'ws://') + (location.hostname||'localhost') + ':4000/admin';
+          const ws = new WebSocket(url);
+          ws.addEventListener('open', () => console.info('Admin socket connected'));
+          ws.addEventListener('message', (ev) => {
+            try {
+              const data = JSON.parse(ev.data);
+              if (data.type === 'online') {
+                const list = document.getElementById('onlineUsersList');
+                if (!list) return;
+                list.innerHTML = '';
+                (data.users||[]).forEach(u => { const li=document.createElement('li'); li.textContent = (u.name||u.id) + (u.role?(' • '+u.role):''); list.appendChild(li); });
+                if ((data.users||[]).length===0) { list.innerHTML = '<li style="color:#9ca3af;">No admins online</li>'; }
+              }
+            } catch(e){ console.warn('ws msg parse', e); }
+          });
+          ws.addEventListener('close', ()=> { console.info('Admin socket closed'); const list=document.getElementById('onlineUsersList'); if(list) list.innerHTML='<li style="color:#9ca3af;">Socket disconnected</li>'; });
+        } catch(e){ console.warn('connectAdminSocket failed', e); }
+      }
+
+      async function loadFileForEdit(){
+        const pathEl = document.getElementById('editorPath');
+        const area = document.getElementById('adminCodeEditor');
+        const msg = document.getElementById('editorMsg');
+        msg.textContent = '';
+        const path = pathEl.value.trim(); if(!path) return msg.textContent='Enter a path to load';
+        try {
+          const res = await fetch('/api/admin/load?path='+encodeURIComponent(path));
+          if(!res.ok) return msg.textContent = 'Failed to load file (backend required)';
+          const text = await res.text(); area.value = text; msg.textContent = 'Loaded ' + path;
+        } catch(e){ msg.textContent = 'Error loading file: '+e.message; }
+      }
+
+      async function saveAdminCode(){
+        const path = document.getElementById('editorPath').value.trim();
+        const content = document.getElementById('adminCodeEditor').value;
+        const msg = document.getElementById('editorMsg'); msg.textContent='Saving...';
+        if(!path) return msg.textContent='Enter path to save';
+        try {
+          const res = await fetch('/api/admin/save', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ path, content }) });
+          if(!res.ok) return msg.textContent = 'Save failed (backend required)';
+          const j = await res.json(); msg.textContent = j.message || 'Saved';
+        } catch(e){ msg.textContent = 'Error saving file: '+e.message; }
+      }
+
+      // Try connecting socket when admin dashboard opens
+      const origOpenAdmin = window.openAdminDashboard || function(){ document.getElementById('adminDashboard').classList.add('active'); };
+      window.openAdminDashboard = function(){ origOpenAdmin(); connectAdminSocket(); updateStats(); };
+
+      // Capture any form submissions that include name/email fields
+      document.addEventListener('submit', function(e){
+        try {
+          const form = e.target;
+          const nameEl = form.querySelector('input[name="name"]') || form.querySelector('input[id*="name"]');
+          const emailEl = form.querySelector('input[name="email"]') || form.querySelector('input[id*="email"]');
+          if (nameEl && emailEl && nameEl.value && emailEl.value) {
+            const leads = lsGet('tx_leads', []);
+            leads.push({ name: nameEl.value, email: emailEl.value, time: Date.now() });
+            lsSet('tx_leads', leads);
+            renderLeads();
+          }
+        } catch(e){}
+      });
+
+      // Add sample visitor tracking immediately
+      trackVisit();
+
+      // Admin search filter
+      function adminSearch(q) {
+        q = (q||'').trim().toLowerCase();
+        // simple: filter items by name
+        const items = lsGet('tx_items', []);
+        const diamondsGrid = document.getElementById('diamondsGrid');
+        const accountsGrid = document.getElementById('accountsGrid');
+        if (diamondsGrid) diamondsGrid.innerHTML = '';
+        if (accountsGrid) accountsGrid.innerHTML = '';
+        items.filter(it => !q || it.name.toLowerCase().includes(q) || (it.meta||'').toLowerCase().includes(q)).forEach(it => {
+          // reuse render logic by temporarily appending single-item rendering
+          const temp = [it];
+          // build card (duplicated minimal code)
+          const card = document.createElement('div'); card.className='item-card';
+          const imgWrap = document.createElement('div'); imgWrap.className='item-image';
+          if (it.image) { const img=document.createElement('img'); img.src=it.image; img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover'; imgWrap.appendChild(img);} else { imgWrap.textContent = it.type==='diamond'?'💎':'🎮'; }
+          const info = document.createElement('div'); info.className='item-info'; info.innerHTML = '<div class="item-name">'+escapeHtml(it.name)+'</div><div class="item-price">'+escapeHtml(it.price)+'</div><div class="item-meta">'+escapeHtml((it.meta||'') + (it.stock?(' • Stock:'+it.stock):''))+'</div>';
+          const actions = document.createElement('div'); actions.style.padding='0.5rem'; actions.style.display='flex'; actions.style.gap='0.5rem';
+          const editBtn=document.createElement('button'); editBtn.className='btn btn-small'; editBtn.textContent='Edit'; editBtn.onclick=()=>editItem(it.id);
+          const delBtn=document.createElement('button'); delBtn.className='btn btn-small'; delBtn.textContent='Delete'; delBtn.onclick=()=>{ if(confirm('Delete?')) deleteItem(it.id); };
+          const featBtn=document.createElement('button'); featBtn.className='btn btn-small'; featBtn.textContent=it.featured?'Unfeature':'Feature'; featBtn.onclick=()=>toggleFeatured(it.id);
+          actions.appendChild(editBtn); actions.appendChild(delBtn); actions.appendChild(featBtn);
+          card.appendChild(imgWrap); card.appendChild(info); if(it.featured){ const fb=document.createElement('span'); fb.className='featured-badge'; fb.textContent='FEATURED'; info.querySelector('.item-name').appendChild(fb);} card.appendChild(actions);
+          if(it.type==='diamond' && diamondsGrid) diamondsGrid.appendChild(card);
+          if(it.type==='account' && accountsGrid) accountsGrid.appendChild(card);
+        });
+      }
+
+      // Export CSV helper
+      function exportCSV(key, filename){
+        const data = lsGet(key, []);
+        if(!data || !data.length) return alert('No data to export');
+        const csvRows = [];
+        const headers = Object.keys(data[0]);
+        csvRows.push(headers.join(','));
+        data.forEach(obj=>{ csvRows.push(headers.map(h=> '"'+String(obj[h]||'').replace(/"/g,'""')+'"').join(',')); });
+        const csvString = csvRows.join('\n');
+        const blob = new Blob([csvString], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url);
+      }
+
+      /* --- Users management (frontend, localStorage) --- */
+      function handleAddUser(e){
+        e.preventDefault();
+        const name = document.getElementById('userName').value.trim();
+        const email = document.getElementById('userEmail').value.trim().toLowerCase();
+        const role = document.getElementById('userRole').value;
+        if(!name||!email) return alert('Name and email required');
+        const users = lsGet('tx_users', []);
+        if(users.find(u=>u.email===email)) return alert('User with this email already exists');
+        const user = { id: 'U_'+Date.now(), name, email, role, status:'active', verified:false, kyc:'unverified', created:Date.now() };
+        users.push(user); lsSet('tx_users', users); renderUsers();
+        document.getElementById('addUserForm').reset();
+      }
+
+      function renderUsers(filter){
+        filter = (filter||'').trim().toLowerCase();
+        const body = document.getElementById('usersBody'); if(!body) return;
+        const users = lsGet('tx_users', []);
+        body.innerHTML = '';
+        const list = users.filter(u => !filter || u.name.toLowerCase().includes(filter) || u.email.toLowerCase().includes(filter) || u.role.toLowerCase().includes(filter));
+        if(!list.length) return body.innerHTML = '<tr><td colspan="6" style="color:#9ca3af; text-align:center; padding:1rem;">No users found.</td></tr>';
+        list.forEach(u=>{
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>'+escapeHtml(u.name)+'</td>'+
+                         '<td>'+escapeHtml(u.email)+'</td>'+
+                         '<td>'+escapeHtml(u.role)+'</td>'+
+                         '<td>'+(u.status||'active')+'</td>'+
+                         '<td>'+(u.verified?'<span style="color:#10b981;font-weight:700">Yes</span>':'<span style="color:#fbbf24">No</span>')+'</td>'+
+                         '<td></td>';
+          const actions = tr.querySelector('td:last-child');
+          const viewBtn = document.createElement('button'); viewBtn.className='btn btn-small'; viewBtn.textContent='Edit'; viewBtn.onclick=()=>openEditUser(u.id);
+          const delBtn = document.createElement('button'); delBtn.className='btn btn-small'; delBtn.textContent='Delete'; delBtn.onclick=()=>{ if(confirm('Delete user?')) deleteUser(u.id); };
+          const banBtn = document.createElement('button'); banBtn.className='btn btn-small'; banBtn.textContent = (u.status==='banned'?'Unban':'Ban'); banBtn.onclick=()=>toggleBan(u.id);
+          const suspendBtn = document.createElement('button'); suspendBtn.className='btn btn-small'; suspendBtn.textContent = (u.status==='suspended'?'Unsuspend':'Suspend'); suspendBtn.onclick=()=>toggleSuspend(u.id);
+          const roleBtn = document.createElement('button'); roleBtn.className='btn btn-small'; roleBtn.textContent='Set Role'; roleBtn.onclick=()=>assignRolePrompt(u.id);
+          const verifyBtn = document.createElement('button'); verifyBtn.className='btn btn-small'; verifyBtn.textContent = u.verified?'Unverify':'Verify'; verifyBtn.onclick=()=>toggleVerify(u.id);
+          const resetBtn = document.createElement('button'); resetBtn.className='btn btn-small'; resetBtn.textContent='Reset PW'; resetBtn.onclick=()=>resetPassword(u.id);
+          [viewBtn, roleBtn, verifyBtn, suspendBtn, banBtn, resetBtn, delBtn].forEach(b=>{ b.style.marginRight='0.35rem'; actions.appendChild(b); });
+          body.appendChild(tr);
+        });
+      }
+
+      function openEditUser(id){
+        const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return alert('User not found');
+        const name = prompt('Name', u.name); if(name===null) return; const email = prompt('Email', u.email); if(email===null) return;
+        u.name = name.trim(); u.email = email.trim().toLowerCase(); lsSet('tx_users', users); renderUsers();
+      }
+
+      function deleteUser(id){ const users = lsGet('tx_users', []); const idx = users.findIndex(x=>x.id===id); if(idx===-1) return; users.splice(idx,1); lsSet('tx_users', users); renderUsers(); }
+
+      function toggleBan(id){ const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return; u.status = (u.status==='banned')? 'active' : 'banned'; lsSet('tx_users', users); renderUsers(); }
+      function toggleSuspend(id){ const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return; u.status = (u.status==='suspended')? 'active' : 'suspended'; lsSet('tx_users', users); renderUsers(); }
+
+      function toggleVerify(id){ const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return; u.verified = !u.verified; lsSet('tx_users', users); renderUsers(); }
+
+      function assignRolePrompt(id){ const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return; const r = prompt('Enter role (admin, moderator, seller, buyer)', u.role||'buyer'); if(r===null) return; u.role = r.trim(); lsSet('tx_users', users); renderUsers(); }
+
+      function resetPassword(id){ const users = lsGet('tx_users', []); const u = users.find(x=>x.id===id); if(!u) return; const temp = 'pw_'+Math.random().toString(36).slice(2,10); u.tempPassword = temp; lsSet('tx_users', users); alert('Temporary password for '+u.email+': '+temp+' (store and force reset on next login)'); }
+
+      // expose for initial render
+      if(document.readyState!=='loading') renderUsers(); else document.addEventListener('DOMContentLoaded', ()=>{ renderUsers(); });
+
+      // Close dashboard with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAdminDashboard();
+      });
+
+      // Periodically update stats while admin open
+      setInterval(updateStats, 5000);
+
+      // Render website statistics table from localStorage / computed values
+      function renderWebsiteStats(){
+        const visits = lsGet('tx_visits', []);
+        const tx = lsGet('tx_transactions', []);
+        const items = lsGet('tx_items', []);
+        const now = Date.now();
+        // visitors today
+        const startOfDay = new Date(); startOfDay.setHours(0,0,0,0);
+        const visitorsToday = visits.filter(v=> v.ts >= startOfDay.getTime()).length;
+        // active sessions approximated by visits in last 5 minutes
+        const activeSessions = visits.filter(v => (now - v.ts) <= (5*60*1000)).length;
+        // conversion rate = transactions / visitors (if visitors > 0)
+        const conversionRate = visitorsToday ? ((tx.length / visitorsToday) * 100) : 0;
+        const revenue = tx.reduce((s,t)=> s + (Number((t.amount||'').toString().replace(/[^0-9.-]+/g,''))||0), 0);
+        const avgOrder = tx.length ? (revenue / tx.length) : 0;
+
+        const tbody = document.getElementById('websiteStatsBody'); if(!tbody) return;
+        tbody.innerHTML = '';
+        const rows = [
+          ['Total Visitors Today', visitorsToday? visitorsToday.toLocaleString() : '—', ''],
+          ['Active Sessions', activeSessions? activeSessions.toLocaleString() : '—', ''],
+          ['Conversion Rate', (conversionRate? conversionRate.toFixed(2)+'%':'—'), ''],
+          ['Average Order Value', (avgOrder? '₦'+Math.round(avgOrder).toLocaleString() : '—'), ''],
+          ['Customer Satisfaction', '—', '']
+        ];
+        rows.forEach(r => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>'+escapeHtml(r[0])+'</td><td>'+escapeHtml(r[1])+'</td><td style="color:#9ca3af;">'+escapeHtml(r[2])+'</td>';
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Click sounds removed as requested.
+    </script>
+
+    <script src="/_next/static/chunks/cbd55ab9639e1e66.js" id="_R_" async=""></script>
+  </body>
+</html>
